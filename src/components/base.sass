@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic-ext')
+@import "~reset-css/sass/reset"
+@import "../components/btn/btn"
+@import "../components/reviews/reviews"
+@import "../components/form/form"
+
+@import "./variables"
+@import "./mixins"
+
+body
+  color: $black
+  font-weight: normal
+  font-style: normal
+  font-family: $font-family-base
+  background-color: #F8F8F8
+  &.body--modal
+    overflow: hidden
+
+.site-wrapper
+  padding: 32px 0
+
+.container
+  padding: 0 16px 0 16px
+  max-width: 1170px
+  margin: 0 auto

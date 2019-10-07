@@ -1,0 +1,35 @@
+@import "../variables"
+
+.review-item
+  padding: 24px 0 16px 0
+  border-bottom: 1px solid #D9D9D9
+  display: flex
+  flex-wrap: wrap
+  &:first-child
+    border-top: 1px solid #D9D9D9
+  &__title
+    line-height: 16px
+    font-weight: 700
+    font-size: $font-size-base
+    flex-grow: 1
+  &__date
+    font-size: $font-size-xsmall
+    line-height: 13px
+    text-align: right
+    color: $darkgray
+  &__rating
+    margin-top: 15px
+    width: 100%
+  &__comment
+    font-size: $font-size-xsmall
+    line-height: 13px
+    margin-top: 8px
+    width: 100%
+  &__star-icon
+    width: 25px
+    height: 24px
+    color: $gray
+    &--active
+      color: $orange
+    & + &
+      margin-left: 4px

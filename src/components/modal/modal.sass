@@ -1,0 +1,80 @@
+@import "../variables"
+
+.modal
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  padding: 0
+  background: rgba(25,36,64,.8)
+  text-align: center
+  overflow-y: scroll
+  overflow-x: hidden
+  transition: opacity .15s linear
+  white-space: nowrap
+  display: none
+  font-size: 0
+  left: 0
+  z-index: 11
+  opacity: 0
+  -webkit-overflow-scrolling: touch
+  -ms-touch-action: cross-slide-y pinch-zoom double-tap-zoom
+  touch-action: cross-slide-y pinch-zoom double-tap-zoom
+  -webkit-transform: translateZ(0)
+  transform: translateZ(0)
+  &--active
+    opacity: 1
+    display: block
+    .modal__dialog
+      transform: translateX(0)
+  &::before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+  &__dialog
+    width: 100%
+    position: relative
+    z-index: 4
+    max-width: 100%
+    min-height: 100%
+    padding: 32px 16px 32px 16px
+    margin-left: 0
+    margin-right: 0
+    display: inline-flex
+    box-sizing: border-box
+    flex-direction: column
+    vertical-align: middle
+    background: #fff
+    transform: translateX(-100%)
+    transition: opacity .3s linear,transform .3s ease-out,-webkit-transform .3s ease-out,-moz-transform .3s ease-out,-o-transform .3s ease-out
+  &__buttons
+    margin-top: auto
+  &__btn
+    &:not(:last-child)
+      margin-right: 15px
+  &__close
+    display: block
+    cursor: pointer
+    width: 18px
+    height: 18px
+    z-index: 10
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+  &__title
+    font-weight: 700
+    font-size: $font-size-base
+    line-height: 16px
+    text-align: center
+  &__head
+    display: flex
+    align-items: center
+    position: relative
+    justify-content: center
+  &__form
+    margin-top: 16px
+  &__rating
+    width: 100%
+    margin-top: 20px

@@ -1,0 +1,23 @@
+.form
+  &__input, &__textarea
+    background: #FFFFFF
+    border: 1px solid #D9D9D9
+    border-radius: 8px
+    width: 100%
+    box-sizing: border-box
+    font-family: $font-family-base
+    font-style: normal
+    font-weight: normal
+    font-size: $font-size-base
+    line-height: 16px
+    color: $black
+    +phc($gray)
+  &__textarea
+    padding: 16px
+  &__input
+    padding: 0 16px
+    height: 48px
+  &__block
+    & + &
+      margin-top: 16px
+h
